@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{64404664-423C-46CC-879F-39CD005B0C85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7294701E-026B-4A4E-B107-D769E51D95FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S3.Services.Record", "src\S3.Services.Record\S3.Services.Record.csproj", "{45B79158-4425-41DD-AF4E-FBE191C8CD26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45B79158-4425-41DD-AF4E-FBE191C8CD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B79158-4425-41DD-AF4E-FBE191C8CD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B79158-4425-41DD-AF4E-FBE191C8CD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B79158-4425-41DD-AF4E-FBE191C8CD26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{45B79158-4425-41DD-AF4E-FBE191C8CD26} = {64404664-423C-46CC-879F-39CD005B0C85}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C59CACF5-134B-4B6A-B0BA-554BC70A8171}
+	EndGlobalSection
+EndGlobal

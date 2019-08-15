@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>b488ab43-a805-4c71-b867-14b7c2fffd8a</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+
+    <!--Use the preview version of C# with nullable reference type-->
+    <LangVersion>8.0</LangVersion>
+    <NullableContextOptions>enable</NullableContextOptions>
+    <!--<Nullable>enable</Nullable>-->
+    <NoWarn>CS8618</NoWarn>
+    <!--#pragma warning disable CS8618 // Non-nullable field is uninitialized.-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.9" />
+    <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\LNX-S3.Common\src\S3.Common\S3.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Rules\Events\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\bin\Release\netcoreapp2.2\S3.Services.Record.deps.json
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\bin\Release\netcoreapp2.2\S3.Services.Record.runtimeconfig.json
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\bin\Release\netcoreapp2.2\S3.Services.Record.runtimeconfig.dev.json
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\bin\Release\netcoreapp2.2\S3.Services.Record.dll
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\bin\Release\netcoreapp2.2\S3.Services.Record.pdb
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.csprojAssemblyReference.cache
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.csproj.CoreCompileInputs.cache
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.RazorAssemblyInfo.cache
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.RazorAssemblyInfo.cs
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.AssemblyInfoInputs.cache
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.AssemblyInfo.cs
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.RazorTargetAssemblyInfo.cache
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.dll
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.pdb
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\bin\Release\netcoreapp2.2\S3.Common.dll
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\bin\Release\netcoreapp2.2\S3.Common.pdb
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Release\netcoreapp2.2\S3.Services.Record.csproj.CopyComplete

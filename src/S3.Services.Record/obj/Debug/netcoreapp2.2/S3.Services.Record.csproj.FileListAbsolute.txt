@@ -1,0 +1,3 @@
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Debug\netcoreapp2.2\S3.Services.Record.csproj.CoreCompileInputs.cache
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Debug\netcoreapp2.2\S3.Services.Record.AssemblyInfoInputs.cache
+C:\Users\Abeeb\Documents\Visual Studio 2019\Projects\S3\LNX-S3-Services.Record\src\S3.Services.Record\obj\Debug\netcoreapp2.2\S3.Services.Record.AssemblyInfo.cs
