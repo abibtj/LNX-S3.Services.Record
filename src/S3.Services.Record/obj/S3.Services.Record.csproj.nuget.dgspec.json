@@ -1,85 +1,9 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3-Services.Record\\src\\S3.Services.Record\\S3.Services.Record.csproj": {}
+    "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Services.Record\\src\\S3.Services.Record\\S3.Services.Record.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3-Services.Record\\src\\S3.Services.Record\\S3.Services.Record.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3-Services.Record\\src\\S3.Services.Record\\S3.Services.Record.csproj",
-        "projectName": "S3.Services.Record",
-        "projectPath": "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3-Services.Record\\src\\S3.Services.Record\\S3.Services.Record.csproj",
-        "packagesPath": "C:\\Users\\Abeeb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3-Services.Record\\src\\S3.Services.Record\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Abeeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp2.2"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\Abeeb\\.nuget\\packages": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp2.2": {
-            "projectReferences": {
-              "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Common\\src\\S3.Common\\S3.Common.csproj": {
-                "projectPath": "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Common\\src\\S3.Common\\S3.Common.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.7.9, )"
-            },
-            "OpenTracing.Contrib.NetCore": {
-              "target": "Package",
-              "version": "[0.6.0, )"
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
     "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Common\\src\\S3.Common\\S3.Common.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -431,7 +355,93 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Services.Record\\src\\S3.Services.Record\\S3.Services.Record.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Services.Record\\src\\S3.Services.Record\\S3.Services.Record.csproj",
+        "projectName": "S3.Services.Record",
+        "projectPath": "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Services.Record\\src\\S3.Services.Record\\S3.Services.Record.csproj",
+        "packagesPath": "C:\\Users\\Abeeb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Services.Record\\src\\S3.Services.Record\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Abeeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Abeeb\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Common\\src\\S3.Common\\S3.Common.csproj": {
+                "projectPath": "C:\\Users\\Abeeb\\Documents\\Visual Studio 2019\\Projects\\S3\\LNX-S3.Common\\src\\S3.Common\\S3.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "OpenTracing.Contrib.NetCore": {
+              "target": "Package",
+              "version": "[0.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true

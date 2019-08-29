@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Folder Include="Rules\Events\" />
+    <Folder Include="StudentScores\Events\" />
   </ItemGroup>
 
 </Project>

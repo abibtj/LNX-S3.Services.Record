@@ -50,6 +50,36 @@ namespace S3.Services.Record.Migrations
 
                     b.ToTable("Rules");
                 });
+
+            modelBuilder.Entity("S3.Services.Record.Domain.StudentScore", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid>("ClassId");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<float>("Score");
+
+                    b.Property<int>("Session");
+
+                    b.Property<Guid>("StudentId");
+
+                    b.Property<Guid>("SubjectId");
+
+                    b.Property<int>("Term");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(30);
+
+                    b.Property<DateTime>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("StudentScores");
+                });
 #pragma warning restore 612, 618
         }
     }

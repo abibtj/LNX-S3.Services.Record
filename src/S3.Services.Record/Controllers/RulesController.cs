@@ -21,9 +21,7 @@ namespace S3.Services.Record.Controllers
     public class RulesController : BaseController
     {
         public RulesController(IBusPublisher busPublisher, IDispatcher dispatcher, ITracer tracer) 
-            : base(busPublisher, dispatcher, tracer )
-        {
-        }
+            : base(busPublisher, dispatcher, tracer) { }
 
         [HttpGet("browse")]
         public async Task<IActionResult> GetAllAsync([FromQuery] BrowseRulesQuery query)
@@ -35,25 +33,14 @@ namespace S3.Services.Record.Controllers
 
         [HttpPost("create")]
         public async Task<IActionResult> Create(CreateRuleCommand command)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-                return await SendAsync(command, resource: "rule");
-        }
+            => await SendAsync(command, resource: "rule");
 
         [HttpPut("update")]
         public async Task<IActionResult> Update(UpdateRuleCommand command)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            return await SendAsync(command,
-              resourceId: command.Id, resource: "rule");
-        }
+            => await SendAsync(command, resourceId: command.Id, resource: "rule");
 
         [HttpDelete("delete/{id:guid}")]
-        public async Task<IActionResult> Delete(Guid id) => await SendAsync(new DeleteRuleCommand(id),
-                resourceId: id, resource: "rule");
+        public async Task<IActionResult> Delete(Guid id) 
+            => await SendAsync(new DeleteRuleCommand(id), resourceId: id, resource: "rule");
     }
 }
