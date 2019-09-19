@@ -48,7 +48,6 @@ namespace S3.Services.Record
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddJsonFile("appsettings.docker.json", optional: true)
                 .AddEnvironmentVariables();
 
             Configuration = builder.Build();
