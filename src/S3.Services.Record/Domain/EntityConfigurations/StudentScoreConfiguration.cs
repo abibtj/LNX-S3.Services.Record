@@ -10,8 +10,8 @@ namespace S3.Services.Registration.Domain.EntityConfigurations
         {
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.StudentId).IsRequired();
-            builder.Property(x => x.SubjectId).IsRequired();
-            builder.Property(x => x.ClassId).IsRequired();
+            builder.Property(x => x.Subject).HasMaxLength(30).IsRequired();
+            builder.Property(x => x.Class).HasMaxLength(20).IsRequired();
             builder.Property(x => x.Type).HasMaxLength(30).IsRequired();
             builder.Property(x => x.Term).IsRequired();
             builder.Property(x => x.Session).IsRequired();
