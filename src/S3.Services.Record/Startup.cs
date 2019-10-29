@@ -33,7 +33,7 @@ using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using S3.Services.Record.Utility;
 using S3.Services.Record.Rules.Commands;
-using S3.Services.Record.StudentScores.Commands;
+using S3.Services.Record.ClassSubjectScores.Commands;
 
 namespace S3.Services.Record
 {
@@ -99,7 +99,8 @@ namespace S3.Services.Record
                 // Initialise the database
                 try
                 {
-                    //dbInitialiser.Initialise();
+                    if (Configuration.GetValue<string>("database:seed").ToLowerInvariant() == "true")
+                        dbInitialiser.Initialise();
                 }
                 catch (Exception)
                 {
@@ -118,9 +119,9 @@ namespace S3.Services.Record
                .SubscribeCommand<CreateRuleCommand>()
                .SubscribeCommand<UpdateRuleCommand>()
                .SubscribeCommand<DeleteRuleCommand>()
-               .SubscribeCommand<CreateStudentScoreCommand>()
-               .SubscribeCommand<UpdateStudentScoreCommand>()
-               .SubscribeCommand<DeleteStudentScoreCommand>();
+               .SubscribeCommand<CreateClassSubjectScoresCommand>()
+               .SubscribeCommand<UpdateClassSubjectScoresCommand>()
+               .SubscribeCommand<DeleteClassSubjectScoresCommand>();
 
             var serviceId = app.UseConsul();
 

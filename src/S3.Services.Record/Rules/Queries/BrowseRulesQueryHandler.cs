@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using S3.Common.Handlers;
 using S3.Common.Mongo;
 using S3.Common.Types;
+using S3.Common.Utility;
 using S3.Services.Record.Domain;
 using S3.Services.Record.Dto;
 using S3.Services.Record.Utility;
@@ -22,8 +23,16 @@ namespace S3.Services.Record.Rules.Queries
 
         public async Task<IEnumerable<RuleDto>> HandleAsync(BrowseRulesQuery query)
         {
-            var rules = _mapper.Map<IEnumerable<RuleDto>>(_db.Rules.AsEnumerable());
-           
+            IQueryable<Rule> set = _db.Rules;
+
+            if (!(query.IncludeExpressions is null))
+                set = IncludeHelper<Rule>.IncludeComponents(set, query.IncludeExpressions);
+
+            set = query.SchoolId is null ?
+                set : set.Where(x => x.SchoolId == query.SchoolId);
+
+            var rules = _mapper.Map<IEnumerable<RuleDto>>(set);
+
             bool ascending = true;
             if (!string.IsNullOrEmpty(query.SortOrder) &&
                 (query.SortOrder.ToLowerInvariant() == "desc" || query.SortOrder.ToLowerInvariant() == "descending"))

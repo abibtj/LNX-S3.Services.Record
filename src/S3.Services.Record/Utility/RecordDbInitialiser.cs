@@ -35,6 +35,10 @@ namespace S3.Services.Record.Utility
                     FirstExamPercentage = 20,
                     HomeworkPercentage = 20,
                     SecondExamPercentage = 20,
+                    A_DistinctionPoint = 85,
+                    B_VeryGoodPoint = 70,
+                    C_CreditPoint = 55,
+                    P_PassPoint = 50,
                     IsDefault = true,
                     SchoolId = Guid.NewGuid()
                 }

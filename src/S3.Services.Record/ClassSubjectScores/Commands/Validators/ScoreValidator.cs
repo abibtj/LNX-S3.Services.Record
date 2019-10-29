@@ -1,9 +1,8 @@
 ﻿
 using FluentValidation;
-using S3.Services.Record.StudentScores.Commands;
 using S3.Services.Record.Domain;
 
-namespace S3.Services.Record.Utility
+namespace S3.Services.Record.ClassSubjectScores.Commands.Validators
 {
     public class ScoreValidator : AbstractValidator<Score>
     {
@@ -12,7 +11,7 @@ namespace S3.Services.Record.Utility
             RuleFor(x => x.StudentId)
                 .NotEmpty().WithMessage("Student's Id is required.");
 
-            RuleFor(x => x.StudentScore)
+            RuleFor(x => x.Mark)
                 .InclusiveBetween(0, 100).WithMessage("Student's score must be between 0 and 100.");
         }
     }

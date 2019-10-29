@@ -5,14 +5,14 @@ using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
-namespace S3.Services.Record.StudentScores.Commands
+namespace S3.Services.Record.ClassSubjectScores.Commands
 {
-    public class DeleteStudentScoreCommand : ICommand
+    public class DeleteClassSubjectScoresCommand : ICommand
     {
         [Required]
         public Guid Id { get; }
 
         [JsonConstructor]
-        public DeleteStudentScoreCommand(Guid id) => Id = id;
+        public DeleteClassSubjectScoresCommand(Guid id) => Id = id;
     }
 }

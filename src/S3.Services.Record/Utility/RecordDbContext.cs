@@ -12,7 +12,9 @@ namespace S3.Services.Record.Utility
         }
 
         public DbSet<Rule> Rules { get; set; }
-        public DbSet<StudentScore> StudentScores { get; set; }
+        public DbSet<Score> Scores { get; set; }
+        public DbSet<Domain.ClassSubjectScores> ClassSubjectScores { get; set; }
+        //public DbSet<StudentScore> StudentScores { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
