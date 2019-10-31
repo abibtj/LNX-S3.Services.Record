@@ -9,8 +9,8 @@ namespace S3.Services.Record.Utility
         public AutoMapperProfile()
         {
             CreateMap<Rule, RuleDto>().ReverseMap();
-            CreateMap<Domain.ClassSubjectScores, ClassSubjectScoresDto>().ReverseMap();
-            //CreateMap<StudentScore, StudentScoreDto>().ReverseMap();
+            //CreateMap<Domain.ClassSubjectScores, ClassSubjectScoresDto>().ReverseMap();
+            CreateMap<StudentScore, StudentScoreDto>().ReverseMap();
         }
     }
 }

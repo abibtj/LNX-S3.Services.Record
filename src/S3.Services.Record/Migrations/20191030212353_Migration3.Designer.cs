@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using S3.Services.Record.Utility;
 
 namespace S3.Services.Record.Migrations
 {
     [DbContext(typeof(RecordDbContext))]
-    partial class RecordDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191030212353_Migration3")]
+    partial class Migration3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

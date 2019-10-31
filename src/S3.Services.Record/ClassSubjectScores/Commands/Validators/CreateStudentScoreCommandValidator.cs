@@ -1,30 +1,19 @@
 ﻿
-//using FluentValidation;
-//using S3.Services.Record.StudentScores.Commands;
-//using S3.Services.Record.Domain;
+using FluentValidation;
+using S3.Services.Record.StudentScores.Commands;
+using S3.Services.Record.Domain;
+using S3.Services.Record.ClassSubjectScores.Commands.Validators;
 
-//namespace S3.Services.Record.Utility
-//{
-//    public class CreateStudentScoreCommandValidator : AbstractValidator<CreateStudentScoreCommand>
-//    {
-//        public CreateStudentScoreCommandValidator()
-//        {
-//            RuleFor(x => x.SubjectId)
-//                .NotEmpty().WithMessage("Subject's Id is required.");
+namespace S3.Services.Record.ClassSubjectScores.Commands.Validators
+{
+    public class CreateStudentScoreCommandValidator : AbstractValidator<CreateStudentScoreCommand>
+    {
+        public CreateStudentScoreCommandValidator()
+        {
+            RuleFor(x => x.StudentScores)
+                .NotNull().WithMessage("Student scores are required.");
 
-//            RuleFor(x => x.ClassId)
-//                .NotEmpty().WithMessage("Class's Id is required.");
-
-//            RuleFor(x => x.Term)
-//                .NotEmpty().WithMessage("Term is required.");
-   
-//            RuleFor(x => x.Session)
-//                .NotEmpty().WithMessage("Session is required.");
-
-//            RuleFor(x => x.Scores)
-//                .NotNull().WithMessage("Student scores are required.");
-
-//            RuleForEach(x => x.Scores).SetValidator(new ScoreValidator());
-//        }
-//    }
-//}
+            RuleForEach(x => x.StudentScores).SetValidator(new StudentScoreValidator());
+        }
+    }
+}

@@ -34,6 +34,7 @@ using AutoMapper;
 using S3.Services.Record.Utility;
 using S3.Services.Record.Rules.Commands;
 using S3.Services.Record.ClassSubjectScores.Commands;
+using S3.Services.Record.StudentScores.Commands;
 
 namespace S3.Services.Record
 {
@@ -119,9 +120,13 @@ namespace S3.Services.Record
                .SubscribeCommand<CreateRuleCommand>()
                .SubscribeCommand<UpdateRuleCommand>()
                .SubscribeCommand<DeleteRuleCommand>()
-               .SubscribeCommand<CreateClassSubjectScoresCommand>()
-               .SubscribeCommand<UpdateClassSubjectScoresCommand>()
-               .SubscribeCommand<DeleteClassSubjectScoresCommand>();
+               .SubscribeCommand<CreateStudentScoreCommand>()
+               .SubscribeCommand<UpdateStudentScoreCommand>()
+               .SubscribeCommand<DeleteStudentScoreCommand>()
+               //.SubscribeCommand<CreateClassSubjectScoresCommand>()
+               //.SubscribeCommand<UpdateClassSubjectScoresCommand>()
+               //.SubscribeCommand<DeleteClassSubjectScoresCommand>()
+               ;
 
             var serviceId = app.UseConsul();
 
