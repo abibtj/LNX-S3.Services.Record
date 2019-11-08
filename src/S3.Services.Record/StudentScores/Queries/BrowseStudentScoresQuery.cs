@@ -9,6 +9,7 @@ namespace S3.Services.Record.StudentScores.Queries
     public class BrowseStudentScoresQuery : BrowseQuery<StudentScore>, IQuery<IEnumerable<StudentScoreDto>>
     {
         public Guid? SchoolId { get; set; }
+        public Guid? StudentId { get; set; }
         public Guid? ClassId { get; set; }
         public string? Subject { get; set; }
         public string? ExamType { get; set; } // CA, First exam, Second exam, Homework, Class Activities
@@ -16,11 +17,11 @@ namespace S3.Services.Record.StudentScores.Queries
         public int? Session { get; set; }
 
         //[JsonConstructor]
-        public BrowseStudentScoresQuery(string[]? includeArray, Guid? schoolId, Guid? classId, string? subject, string? examType,
+        public BrowseStudentScoresQuery(string[]? includeArray, Guid? schoolId, Guid? studentId, Guid? classId, string? subject, string? examType,
             int? term, int? session, int page, int results, string orderBy, string sortOrder)
           : base(includeArray, page, results, orderBy, sortOrder)
 
-            => (SchoolId, ClassId, Subject, ExamType, Term, Session)
-            = (schoolId, classId, subject, examType, term, session);
+            => (SchoolId, StudentId, ClassId, Subject, ExamType, Term, Session)
+            = (schoolId, studentId, classId, subject, examType, term, session);
     }
 }

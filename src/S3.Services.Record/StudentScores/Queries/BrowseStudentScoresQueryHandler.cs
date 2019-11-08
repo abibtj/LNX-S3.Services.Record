@@ -30,6 +30,9 @@ namespace S3.Services.Record.StudentScores.Queries
 
             set = query.SchoolId is null ?
                 set : set.Where(x => x.SchoolId == query.SchoolId);
+           
+            set = query.StudentId is null ?
+                set : set.Where(x => x.StudentId == query.StudentId);
 
             set = query.ClassId is null ?
                 set : set.Where(x => x.ClassId == query.ClassId);
