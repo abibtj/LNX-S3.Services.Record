@@ -16,7 +16,7 @@ namespace S3.Services.Record.Domain.EntityConfigurations
             builder.Property(x => x.Subject).HasMaxLength(30).IsRequired();
             builder.Property(x => x.ClassName).HasMaxLength(20).IsRequired();
             builder.Property(x => x.ExamType).HasMaxLength(30).IsRequired();
-            builder.Property(x => x.Term).IsRequired();
+            builder.Property(x => x.Term).HasMaxLength(15).IsRequired();
             builder.Property(x => x.Session).IsRequired();
             builder.Property(x => x.Mark).IsRequired();
         }

@@ -39,6 +39,9 @@ namespace S3.Services.Record.ClassSubjectScores.Commands.Validators
 
             RuleFor(x => x.Mark)
                 .InclusiveBetween(0, 100).WithMessage("Student's score must be between 0 and 100.");
+
+            RuleFor(x => x.RuleId)
+                 .NotEmpty().WithMessage("Rule's Id is required.");
         }
     }
 }

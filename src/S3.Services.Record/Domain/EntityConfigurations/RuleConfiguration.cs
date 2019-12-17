@@ -11,14 +11,13 @@ namespace S3.Services.Record.Domain.EntityConfigurations
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
             builder.Property(x => x.SchoolId).IsRequired();
             builder.Property(x => x.Name).HasMaxLength(20).IsRequired();
-            builder.Property(x => x.CAPercentage).IsRequired();
+            //builder.Property(x => x.CAPercentage).IsRequired();
             builder.Property(x => x.FirstExamPercentage).IsRequired();
-            builder.Property(x => x.SecondExamPercentage).IsRequired();
-            builder.Property(x => x.HomeworkPercentage).IsRequired();
-            builder.Property(x => x.A_DistinctionPoint).IsRequired();
-            builder.Property(x => x.B_VeryGoodPoint).IsRequired();
-            builder.Property(x => x.C_CreditPoint).IsRequired();
-            builder.Property(x => x.P_PassPoint).IsRequired();
+            builder.Property(x => x.A_DistinctionCutoff).IsRequired();
+            builder.Property(x => x.B_VeryGoodCutoff).IsRequired();
+            builder.Property(x => x.C_CreditCutoff).IsRequired();
+            builder.Property(x => x.P_PassCutoff).IsRequired();
+            builder.Property(x => x.F_FailCutoff).IsRequired();
         }
     }
 }

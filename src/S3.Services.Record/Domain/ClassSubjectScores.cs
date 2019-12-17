@@ -16,8 +16,8 @@
 //        public Guid ClassId { get; set; }
 //        public string ClassName { get; set; }
 //        public string Subject { get; set; }
-//        public string ExamType { get; set; } // CA, First exam, Second exam, Homework, Class Activities
-//        public int Term { get; set; }
+//        public string ExamType { get; set; } // CA, First Exam, Second Exam, Homework, Class Activities
+//        public string Term { get; set; }
 //        public int Session { get; set; }
 //        public virtual ICollection<Score> Scores { get; set; }
 //    }

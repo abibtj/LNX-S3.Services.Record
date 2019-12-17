@@ -25,7 +25,7 @@
 
 //        [HttpGet("browse")]
 //        public async Task<IActionResult> GetAllAsync(string[]? include, Guid? schoolId, Guid? classId, string? subject, string? examType,
-//            int? term, int? session, int page, int results, string orderBy, string sortOrder)
+//            string? term, int? session, int page, int results, string orderBy, string sortOrder)
 
 //             => Ok(await QueryAsync(new BrowseClassSubjectScoresQuery(include, schoolId, classId, subject, examType, term, session, page,
 //                 results, orderBy, sortOrder)));

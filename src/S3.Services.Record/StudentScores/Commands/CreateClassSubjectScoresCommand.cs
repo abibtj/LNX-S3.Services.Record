@@ -18,9 +18,9 @@
 //        [Required(ErrorMessage = "Subject is required.")]
 //        public string Subject { get; set; }
 //        [Required(ErrorMessage = "Exam type is required.")]
-//        public string ExamType { get; set; } // CA, First exam, Second exam, Homework, Class Activities
+//        public string ExamType { get; set; } // CA, First Exam, Second Exam, Homework, Class Activities
 //        [Required]
-//        public int Term { get; set; }
+//        public string Term { get; set; }
 //        [Required]
 //        public int Session { get; set; }
 //        [Required]

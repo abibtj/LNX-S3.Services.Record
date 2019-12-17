@@ -43,7 +43,7 @@ namespace S3.Services.Record.StudentScores.Queries
             set = string.IsNullOrEmpty(query.ExamType) ?
                 set : set.Where(x => x.ExamType == query.ExamType);
 
-            set = query.Term is null ?
+            set = string.IsNullOrEmpty(query.Term) ?
                 set : set.Where(x => x.Term == query.Term);
 
             set = query.Session is null ?

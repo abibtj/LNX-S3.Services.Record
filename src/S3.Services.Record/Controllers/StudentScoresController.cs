@@ -25,7 +25,7 @@ namespace S3.Services.Record.Controllers
 
         [HttpGet("browse")]
         public async Task<IActionResult> GetAllAsync(string[]? include, Guid? schoolId, Guid? studentId, Guid? classId, string? subject, string? examType,
-            int? term, int? session, int page, int results, string orderBy, string sortOrder)
+            string? term, int? session, int page, int results, string orderBy, string sortOrder)
 
              => Ok(await QueryAsync(new BrowseStudentScoresQuery(include, schoolId, studentId, classId, subject, examType, term, session, page,
                  results, orderBy, sortOrder)));

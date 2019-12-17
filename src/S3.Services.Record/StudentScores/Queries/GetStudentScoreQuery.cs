@@ -9,7 +9,7 @@ namespace S3.Services.Record.StudentScores.Queries
 {
     public class GetStudentScoreQuery : GetQuery<StudentScore>, IQuery<StudentScoreDto>
     {
-        //[JsonConstructor]
+        [JsonConstructor]
         public GetStudentScoreQuery(Guid id, string[]? includeArray) : base(id, includeArray) { }
     }
 }

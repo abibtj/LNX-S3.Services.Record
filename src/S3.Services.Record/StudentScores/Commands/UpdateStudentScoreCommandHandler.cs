@@ -28,9 +28,13 @@ namespace S3.Services.Record.StudentScores.Commands
         {
             // Get existing studentScores
             var sampleScore = command.StudentScores.First();
-            var existingStudentScores = _db.StudentScores.Where(x => x.SchoolId == sampleScore.SchoolId && 
-            x.ClassId == sampleScore.ClassId && x.ExamType == sampleScore.ExamType && x.Session == sampleScore.Session
-            && x.Term == sampleScore.Term );
+            var existingStudentScores = _db.StudentScores.Where(
+                x => x.SchoolId == sampleScore.SchoolId && 
+                x.ClassId == sampleScore.ClassId && 
+                x.Subject == sampleScore.Subject && 
+                x.ExamType == sampleScore.ExamType && 
+                x.Session == sampleScore.Session && 
+                x.Term == sampleScore.Term );
 
             if (!existingStudentScores.Any()) // Nothing exists, add the student scores afresh
             {

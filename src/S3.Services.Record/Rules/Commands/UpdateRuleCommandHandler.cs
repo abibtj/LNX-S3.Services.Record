@@ -31,6 +31,15 @@ namespace S3.Services.Record.Rules.Commands
                 throw new S3Exception(ExceptionCodes.NotFound,
                     $"Rule with id: '{command.Id}' was not found.");
 
+            // Check for existence of a rule with the same name in this school.
+            if (await _db.Rules.AnyAsync(x => (x.SchoolId == command.SchoolId) &&
+                x.Name.ToLowerInvariant() == Normalizer.NormalizeSpaces(command.Name).ToLowerInvariant()
+                && (x.Id != command.Id)))
+            {
+                throw new S3Exception(ExceptionCodes.NameInUse,
+                    $"Rule name: '{command.Name}' is already in use.");
+            }
+
             if (command.IsDefault)// Check if any default rule exists and make it non-default
             {
                 var schoolRules = _db.Rules.Where(x => x.SchoolId == command.SchoolId);
@@ -46,9 +55,15 @@ namespace S3.Services.Record.Rules.Commands
             rule.FirstExamPercentage = command.FirstExamPercentage;
             rule.SecondExamPercentage = command.SecondExamPercentage;
             rule.HomeworkPercentage = command.HomeworkPercentage;
-            rule.ClassParticipationPercentage = command.ClassParticipationPercentage;
+            rule.ClassActivitiesPercentage = command.ClassActivitiesPercentage;
             rule.IsDefault = command.IsDefault;
             rule.SchoolId = command.SchoolId;
+            rule.A_DistinctionCutoff = command.A_DistinctionCutoff;
+            rule.B_VeryGoodCutoff = command.B_VeryGoodCutoff;
+            rule.C_CreditCutoff = command.C_CreditCutoff;
+            rule.P_PassCutoff = command.P_PassCutoff;
+            rule.F_FailCutoff = command.F_FailCutoff;
+
             rule.SetUpdatedDate();
 
             await _db.SaveChangesAsync();

@@ -31,14 +31,14 @@ namespace S3.Services.Record.Utility
                 {
                     Name = "Default Rule",
                     CAPercentage = 20,
-                    ClassParticipationPercentage = 20,
+                    ClassActivitiesPercentage = 20,
                     FirstExamPercentage = 20,
                     HomeworkPercentage = 20,
                     SecondExamPercentage = 20,
-                    A_DistinctionPoint = 85,
-                    B_VeryGoodPoint = 70,
-                    C_CreditPoint = 55,
-                    P_PassPoint = 50,
+                    A_DistinctionCutoff = 85,
+                    B_VeryGoodCutoff = 70,
+                    C_CreditCutoff = 55,
+                    P_PassCutoff = 50,
                     IsDefault = true,
                     SchoolId = Guid.NewGuid()
                 }

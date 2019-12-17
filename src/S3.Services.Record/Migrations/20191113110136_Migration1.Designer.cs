@@ -10,8 +10,8 @@ using S3.Services.Record.Utility;
 namespace S3.Services.Record.Migrations
 {
     [DbContext(typeof(RecordDbContext))]
-    [Migration("20191029083822_Migration2")]
-    partial class Migration2
+    [Migration("20191113110136_Migration1")]
+    partial class Migration1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,49 @@ namespace S3.Services.Record.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("S3.Services.Record.Domain.ClassSubjectScores", b =>
+            modelBuilder.Entity("S3.Services.Record.Domain.Rule", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<float>("A_DistinctionCutoff");
+
+                    b.Property<float>("B_VeryGoodCutoff");
+
+                    b.Property<float>("CAPercentage");
+
+                    b.Property<float>("C_CreditCutoff");
+
+                    b.Property<float>("ClassActivitiesPercentage");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<float>("F_FailCutoff");
+
+                    b.Property<float>("FirstExamPercentage");
+
+                    b.Property<float>("HomeworkPercentage");
+
+                    b.Property<bool>("IsDefault");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<float>("P_PassCutoff");
+
+                    b.Property<Guid>("SchoolId");
+
+                    b.Property<float>("SecondExamPercentage");
+
+                    b.Property<DateTime>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Rules");
+                });
+
+            modelBuilder.Entity("S3.Services.Record.Domain.StudentScore", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
@@ -38,75 +80,13 @@ namespace S3.Services.Record.Migrations
                         .IsRequired()
                         .HasMaxLength(30);
 
+                    b.Property<float>("Mark");
+
+                    b.Property<Guid>("RuleId");
+
                     b.Property<Guid>("SchoolId");
 
                     b.Property<int>("Session");
-
-                    b.Property<string>("Subject")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.Property<int>("Term");
-
-                    b.Property<DateTime>("UpdatedDate");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ClassSubjectScores");
-                });
-
-            modelBuilder.Entity("S3.Services.Record.Domain.Rule", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("A_DistinctionPoint");
-
-                    b.Property<int>("B_VeryGoodPoint");
-
-                    b.Property<float>("CAPercentage");
-
-                    b.Property<int>("C_CreditPoint");
-
-                    b.Property<float>("ClassParticipationPercentage");
-
-                    b.Property<DateTime>("CreatedDate");
-
-                    b.Property<int>("F_FailPoint");
-
-                    b.Property<float>("FirstExamPercentage");
-
-                    b.Property<float>("HomeworkPercentage");
-
-                    b.Property<bool>("IsDefault");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(20);
-
-                    b.Property<int>("P_PassPoint");
-
-                    b.Property<Guid>("SchoolId");
-
-                    b.Property<float>("SecondExamPercentage");
-
-                    b.Property<DateTime>("UpdatedDate");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Rules");
-                });
-
-            modelBuilder.Entity("S3.Services.Record.Domain.Score", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<Guid>("ClassSubjectScoresId");
-
-                    b.Property<DateTime>("CreatedDate");
-
-                    b.Property<float>("Mark");
 
                     b.Property<Guid>("StudentId");
 
@@ -114,21 +94,19 @@ namespace S3.Services.Record.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasMaxLength(30);
+
+                    b.Property<string>("Term")
+                        .IsRequired()
+                        .HasMaxLength(15);
+
                     b.Property<DateTime>("UpdatedDate");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassSubjectScoresId");
-
-                    b.ToTable("Scores");
-                });
-
-            modelBuilder.Entity("S3.Services.Record.Domain.Score", b =>
-                {
-                    b.HasOne("S3.Services.Record.Domain.ClassSubjectScores", "ClassSubjectScores")
-                        .WithMany("Scores")
-                        .HasForeignKey("ClassSubjectScoresId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                    b.ToTable("StudentScores");
                 });
 #pragma warning restore 612, 618
         }
