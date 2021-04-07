@@ -15,46 +15,62 @@ namespace S3.Services.Record.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
+                .HasAnnotation("ProductVersion", "3.1.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("S3.Services.Record.Domain.Rule", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<float>("A_DistinctionCutoff");
+                    b.Property<float>("A_DistinctionCutoff")
+                        .HasColumnType("real");
 
-                    b.Property<float>("B_VeryGoodCutoff");
+                    b.Property<float>("B_VeryGoodCutoff")
+                        .HasColumnType("real");
 
-                    b.Property<float?>("CAPercentage");
+                    b.Property<float?>("CAPercentage")
+                        .HasColumnType("real");
 
-                    b.Property<float>("C_CreditCutoff");
+                    b.Property<float>("C_CreditCutoff")
+                        .HasColumnType("real");
 
-                    b.Property<float?>("ClassActivitiesPercentage");
+                    b.Property<float?>("ClassActivitiesPercentage")
+                        .HasColumnType("real");
 
-                    b.Property<DateTime>("CreatedDate");
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
-                    b.Property<float>("F_FailCutoff");
+                    b.Property<float>("F_FailCutoff")
+                        .HasColumnType("real");
 
-                    b.Property<float>("FirstExamPercentage");
+                    b.Property<float>("FirstExamPercentage")
+                        .HasColumnType("real");
 
-                    b.Property<float?>("HomeworkPercentage");
+                    b.Property<float?>("HomeworkPercentage")
+                        .HasColumnType("real");
 
-                    b.Property<bool>("IsDefault");
+                    b.Property<bool>("IsDefault")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("nvarchar(20)")
                         .HasMaxLength(20);
 
-                    b.Property<float>("P_PassCutoff");
+                    b.Property<float>("P_PassCutoff")
+                        .HasColumnType("real");
 
-                    b.Property<Guid>("SchoolId");
+                    b.Property<Guid>("SchoolId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<float?>("SecondExamPercentage");
+                    b.Property<float?>("SecondExamPercentage")
+                        .HasColumnType("real");
 
-                    b.Property<DateTime>("UpdatedDate");
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -64,43 +80,57 @@ namespace S3.Services.Record.Migrations
             modelBuilder.Entity("S3.Services.Record.Domain.StudentScore", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ClassId");
+                    b.Property<Guid>("ClassId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ClassName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(20)")
                         .HasMaxLength(20);
 
-                    b.Property<DateTime>("CreatedDate");
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ExamType")
                         .IsRequired()
+                        .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.Property<float>("Mark");
+                    b.Property<float>("Mark")
+                        .HasColumnType("real");
 
-                    b.Property<Guid>("RuleId");
+                    b.Property<Guid>("RuleId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("SchoolId");
+                    b.Property<Guid>("SchoolId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Session");
+                    b.Property<int>("Session")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("StudentId");
+                    b.Property<Guid>("StudentId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("StudentName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
                     b.Property<string>("Subject")
                         .IsRequired()
+                        .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
                     b.Property<string>("Term")
                         .IsRequired()
+                        .HasColumnType("nvarchar(15)")
                         .HasMaxLength(15);
 
-                    b.Property<DateTime>("UpdatedDate");
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

@@ -24,7 +24,7 @@ namespace S3.Services.Record.Controllers
             : base(busPublisher, dispatcher, tracer) { }
 
         [HttpGet("browse")]
-        public async Task<IActionResult> GetAllAsync(string[]? include, Guid? schoolId, Guid? studentId, Guid? classId, string? subject, string? examType,
+        public async Task<IActionResult> GetAllAsync([FromQuery]string[]? include, Guid? schoolId, Guid? studentId, Guid? classId, string? subject, string? examType,
             string? term, int? session, int page, int results, string orderBy, string sortOrder)
 
              => Ok(await QueryAsync(new BrowseStudentScoresQuery(include, schoolId, studentId, classId, subject, examType, term, session, page,

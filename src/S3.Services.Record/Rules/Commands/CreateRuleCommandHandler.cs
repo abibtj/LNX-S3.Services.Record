@@ -25,12 +25,24 @@ namespace S3.Services.Record.Rules.Commands
         public async Task HandleAsync(CreateRuleCommand command, ICorrelationContext context)
         {
             // Check for existence of a rule with the same name in this school.
-            if (await _db.Rules.AnyAsync(x => (x.SchoolId == command.SchoolId) &&
-                x.Name.ToLowerInvariant() == Normalizer.NormalizeSpaces(command.Name).ToLowerInvariant()))
+            var ruleName = Normalizer.NormalizeSpaces(command.Name).ToLowerInvariant();
+            if (await _db.Rules.AnyAsync())
             {
-                throw new S3Exception(ExceptionCodes.NameInUse,
-                    $"Rule name: '{command.Name}' is already in use.");
+                var existingRule = _db.Rules.AsEnumerable().FirstOrDefault(x => (x.SchoolId == command.SchoolId) &&
+                                                                                    x.Name.ToLowerInvariant() == ruleName);
+                if (!(existingRule is null))
+                {
+                    throw new S3Exception(ExceptionCodes.NameInUse,
+                        $"Rule name: '{command.Name}' is already in use.");
+                }
             }
+
+            //if (await _db.Rules.AnyAsync(x => (x.SchoolId == command.SchoolId) &&
+            //    x.Name.ToLowerInvariant() == Normalizer.NormalizeSpaces(command.Name).ToLowerInvariant()))
+            //{
+            //    throw new S3Exception(ExceptionCodes.NameInUse,
+            //        $"Rule name: '{command.Name}' is already in use.");
+            //}
 
             if (command.IsDefault)// Check if any default rule exists and make it non-default
             {
@@ -42,7 +54,7 @@ namespace S3.Services.Record.Rules.Commands
                 }
             }
 
-           
+
 
             // Create a new rule
             var rule = new Rule
